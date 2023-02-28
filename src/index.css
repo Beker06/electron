@@ -5,9 +5,48 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.app{
+  height: 100vh;
+  background-color: #ededed;
+}
+.main-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+}
+.main-dark{
+  background-color: #223;
+  color: #ededed;
+}
+.main-light{
+  background-color: #fff;
+}
+.main-table-container{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.main-col{
+  display: flex;
+  flex-direction:column ;
+  width: 80%;
+}
+.main-col h1{
+  text-align: center;
+}
+.footer-container{
+  display: flex;
+  height: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
 }

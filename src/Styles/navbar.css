@@ -1,0 +1,17 @@
+header{
+    width: 100%;
+}
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+    border-bottom: 1px solid #000;
+    max-width: 100%;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+#navbar h1{
+    font-size: 38px;
+    line-height: 13px;
+}

@@ -5,17 +5,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
+  overflow-y: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 .app{
   height: 100vh;
   background-color: #ededed;
 }
+
 .main-container{
   display: flex;
   flex-direction: row;
@@ -25,9 +27,11 @@ code {
 .main-dark{
   background-color: #223;
   color: #ededed;
+
 }
 .main-light{
   background-color: #fff;
+
 }
 .main-table-container{
   display: flex;

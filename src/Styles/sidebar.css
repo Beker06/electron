@@ -1,0 +1,41 @@
+.sidebar-container{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100vh;
+    color: #000;
+    border-left: 1px solid #000;
+}
+.sidebar-container.dark{
+    border-left: 1px solid #fff;
+    color: #fff;
+}
+.element-title{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+}
+.element-title.dark{
+    border-bottom: 1px solid #fff;
+}
+.element-title h1{
+    margin-right: 5px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 20px;
+}
+.element-title h1:nth-child(1){
+    margin-right: 20px;
+    margin-left: 5px;
+}
+.sb-image{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+}
+.sb-image img{
+    display: flex;
+    width: 80%;;
+}

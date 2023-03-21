@@ -1,43 +1,42 @@
 .table-container{
-    display: grid;
-    grid-template-columns: repeat(18, 64px);
-    grid-template-rows: repeat(10, 64px);
-    grid-gap: 4px;
-    width: auto;
-    margin: auto;
-  }
-  
-  .element {
-    border: 2px solid #aaa;
-    background-color: #aaa;
-    color: white;
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  .element.light{
-    background-color: #ffffff;
-    color: #000000;
-  }
-  
-  .element:hover {
-    transform: scale(1.05);
-    z-index: 1;
-  }
-  
-  .element .number {
-    font-size: 8px;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-  }
-  
-  .element .name {
-    font-size: 8px;
-    position: absolute;
-    bottom: 5px;
-    left: 5px;
-  }
+  display: grid;
+  grid-template-columns: repeat(18, 64px);
+  grid-template-rows: repeat(10, 64px);
+  grid-gap: 4px;
+  width: auto;
+  margin: auto;
+}
+
+.element {
+  border: 2px solid #aaa;
+  background-color: #aaa;
+  color: white;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.element.light{
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.element:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+.element .number {
+  font-size: 9px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.element .name {
+  font-size: 10px;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}

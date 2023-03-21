@@ -11,7 +11,43 @@ header{
     padding-left: 8%;
     padding-right: 8%;
 }
+#navbar.light{
+    color: #000;
+    border-bottom: 1px solid #000;
+    background-color: #ededed;
+}
+#navbar.dark{
+    background-color: #223;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
 #navbar h1{
     font-size: 38px;
     line-height: 13px;
 }
+#navbar .theme-container{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+#navbar .theme-container img{
+    width: 100%;
+    height: 100%;
+}
+#navbar ul{
+    display: flex;
+    width: 30%;
+}
+#navbar ul li{
+    list-style: none;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+#navbar ul li:hover{
+    transform: scale(1.05);
+}
+

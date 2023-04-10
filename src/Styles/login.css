@@ -1,0 +1,50 @@
+.login-container {
+    background-color: #ededed;
+}
+
+.login-main {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.form-card-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    background-color: red;
+}
+
+.form-card {
+    background-color: white;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 500px;
+}
+
+
+.react-image {
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    width: 56px;
+}
+
+.space-image {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.space-image img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

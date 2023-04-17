@@ -4,8 +4,6 @@ import './Styles/navbar.css'
 import './index.css'
 import store from "./Redux/store/store";
 import Router from './Router';
-import { useState } from 'react';
-import { UseThemeContext } from '../src/context/themeContext'
 import { Provider } from 'react-redux';
 import { persistStore } from "redux-persist";
 import { BrowserRouter } from 'react-router-dom';
@@ -15,8 +13,8 @@ import { PersistGate } from 'redux-persist/integration/react';
 let persistor = persistStore(store);
 
 function App() {
-  const { isDarkMode } = UseThemeContext()
-  const [selectElement, setSelectElement] = useState(null);
+  // const { isDarkMode } = UseThemeContext()
+  // const [selectElement, setSelectElement] = useState(null);
 
 
   return (

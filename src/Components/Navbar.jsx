@@ -16,30 +16,24 @@ const Navbar = () => {
     <>
       <header>
         <nav id="navbar" className={`${isDarkMode ? "dark" : "light"}`}>
-          <h1>electron</h1>
-          <ul>
-            <li>
-              <button onClick={() => navigate("/")}>
-                Tabla
-              </button>
-            </li>
-            <li>
-              <button onClick={() => navigate("/blogs")}>
-                Blog
-              </button>
-            </li>
-            <li>
-              <button onClick={() => navigate("/login")}>
-                Iniciar sesion
-              </button>
-            </li>
-            <li>
-              <div className='theme-container' onClick={toggleDarkMode}>
-                {isDarkMode ? <img src={Luna} alt="them-icon" /> : <img src={Sol} alt="them-icon" />}
-              </div>
-            </li>
+          <div onClick={() => navigate("/")} className='pointer'><h1 >electron</h1></div>
+          <div className='navLinksContainer'>
+            <button onClick={() => navigate("/")}>
+              Tabla
+            </button>
 
-          </ul>
+            <button onClick={() => navigate("/blogs")}>
+              Blog
+            </button>
+
+            <button onClick={() => navigate("/login")}>
+              Iniciar sesion
+            </button>
+
+            <div className='theme-container' onClick={toggleDarkMode}>
+              {isDarkMode ? <img src={Luna} alt="them-icon" /> : <img src={Sol} alt="them-icon" />}
+            </div>
+          </div>
         </nav>
       </header>
     </>

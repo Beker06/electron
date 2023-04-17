@@ -5,16 +5,14 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #000;
-    border-bottom: 1px solid #000;
     max-width: 100%;
     padding-left: 8%;
     padding-right: 8%;
 }
 #navbar.light{
     color: #000;
-    border-bottom: 1px solid #000;
-    background-color: #ededed;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 }
 #navbar.dark{
     background-color: #223;
@@ -30,6 +28,7 @@ header{
     width: 30px;
     height: 30px;
     cursor: pointer;
+    margin-left: 20px;
 }
 #navbar .theme-container img{
     width: 100%;
@@ -49,5 +48,33 @@ header{
 }
 #navbar ul li:hover{
     transform: scale(1.05);
+}
+.navLinksContainer{
+    height: 100%;
+    display: flex;
+    font-weight: 100;
+    margin-left: 80px;
+    margin-right: 80px;
+    align-items: center;
+    justify-content: center;
+    
+}
+.navLinksContainer button{
+    display: flex;
+    color: #000;
+    font-size: 17px;
+    font-weight: 600;
+    background-color: transparent;
+    height: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
+    cursor: pointer;
+    border: none;
+}
+.navLinksContainer button:hover{
+    background-color: #F0F2F5;
+    color: #0ea5e9;
 }
 

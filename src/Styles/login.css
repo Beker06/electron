@@ -1,5 +1,6 @@
 .login-container {
-    background-color: #ededed;
+    background-color: #F0F2F5;
+    box-shadow: inset 0 2px 4px 0 rgba(0,0,0,0.2);
 }
 
 .login-main {
@@ -8,6 +9,7 @@
     width: 100%;
     height: 100vh;
     justify-content: space-between;
+    background-color: transparent;
 }
 
 .form-card-container {
@@ -15,16 +17,20 @@
     flex-direction: column;
     width: 50%;
     height: 100%;
-    background-color: red;
+    background-color: transparent;
 }
-
 .form-card {
     background-color: white;
-    width: 50%;
+    width: 40%;
     margin: auto;
-    padding-bottom: 500px;
+    border-radius: 5px;
+    padding-top: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    margin-top: 20%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
-
 
 .react-image {
     position: absolute;
@@ -47,4 +53,45 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.container-login-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+.container-login-buttons div{
+    margin-right: 4px;
+}
+.container-login-buttons div a {
+    font-size: 14px;
+    text-decoration: underline;
+    color: #000;
+}
+.container-login-buttons div a:hover{
+    text-decoration: none;
+}
+.container-login-buttons button{
+    background-color: #000000;
+    color: #ffffff;
+}
+.container-login-buttons button:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+.container-register-buttons{
+    padding-top: 20px;
+    margin-top: 24px;
+    border-top:1px solid #e2e8f0 ;
+}
+.container-register-buttons div{
+    font-size: 16px;
+}
+.container-register-buttons div a{
+    color: #000;
+    text-decoration: underline;
+}
+.container-register-buttons div a:hover{
+    text-decoration: none;
 }

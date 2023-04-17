@@ -4,7 +4,13 @@
     width: 20%;
     height: 100vh;
     color: #000;
-    border-left: 1px solid #000;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+.sidebar-container.light{
+    background-color: #fff;
+    box-shadow: inset 2px 2px 4px 0 rgba(0,0,0,0.2);
 }
 .sidebar-container.dark{
     border-left: 1px solid #fff;
@@ -13,11 +19,11 @@
 .element-title{
     display: flex;
     flex-direction: row;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #cbd5e1;
     margin-bottom: 10px;
 }
 .element-title.dark{
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #e2e8f0;
 }
 .element-title h1{
     margin-right: 5px;

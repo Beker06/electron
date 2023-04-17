@@ -6,7 +6,7 @@ const Sidebar = (props) => {
 
   return (
     <>
-      <div className={`sidebar-container ${isDarkMode && "dark"}`}>
+      <div className={`sidebar-container light ${isDarkMode && "dark"}`}>
         <div className={`element-title ${isDarkMode && "dark"}`}>
           <h1>{props.number}</h1>
           <h1>{props.name}</h1>

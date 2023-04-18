@@ -1,44 +1,55 @@
-header{
+header {
     width: 100%;
 }
-#navbar{
+
+#navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 100%;
-    padding-left: 8%;
-    padding-right: 8%;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
 }
-#navbar.light{
+
+#navbar.light {
     color: #000;
     background-color: #ffffff;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
-#navbar.dark{
+
+#navbar.dark {
     background-color: #223;
     color: #fff;
     border-bottom: 1px solid #fff;
 }
-#navbar h1{
+
+#navbar h1 {
     font-size: 38px;
     line-height: 13px;
+    margin-left: 50%;
 }
-#navbar .theme-container{
+
+#navbar .theme-container {
     display: flex;
     width: 30px;
     height: 30px;
     cursor: pointer;
     margin-left: 20px;
 }
-#navbar .theme-container img{
+
+#navbar .theme-container img {
     width: 100%;
     height: 100%;
 }
-#navbar ul{
+
+#navbar ul {
     display: flex;
     width: 30%;
 }
-#navbar ul li{
+
+#navbar ul li {
     list-style: none;
     margin: auto;
     font-size: 18px;
@@ -46,20 +57,23 @@ header{
     letter-spacing: 1px;
     cursor: pointer;
 }
-#navbar ul li:hover{
+
+#navbar ul li:hover {
     transform: scale(1.05);
 }
-.navLinksContainer{
+
+.navLinksContainer {
     height: 100%;
     display: flex;
     font-weight: 100;
     margin-left: 80px;
-    margin-right: 80px;
+    margin-right: 220px;
     align-items: center;
     justify-content: center;
-    
+
 }
-.navLinksContainer button{
+
+.navLinksContainer .navButton {
     display: flex;
     color: #000;
     font-size: 17px;
@@ -73,8 +87,57 @@ header{
     cursor: pointer;
     border: none;
 }
-.navLinksContainer button:hover{
+
+.navLinksContainer button:hover {
     background-color: #F0F2F5;
     color: #0ea5e9;
 }
 
+.bars-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    width: 220%;
+    height: auto;
+    position: absolute;
+    color: #fff;
+    top: 150%;
+    right: 120%;
+}
+
+#menu .container-menu {
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+    padding: 10px;
+    background-color: #fff;
+    font-weight: 100;
+    align-items: flex-start;
+    border: 1px solid #F0F2F5;
+    border-radius: 10px;
+    box-shadow: 0px -2px 8px 4px rgba(0, 0, 0, 0.1);
+}
+
+#menu .container-menu button {
+    background-color: #fff;
+    color: #000;
+    width: 100%;
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 3px;
+    font-size: 100%;
+    border: none;
+}
+
+#menu .container-menu button:hover {
+    background-color: #000;
+    color: #fff;
+}

@@ -1,5 +1,7 @@
 import React from 'react'
 import data from "../Data/Periodic-Table-JSON.json"
+import AOS from 'aos'
+import "aos/dist/aos.css"
 
 const colorMap = {
   "noble gas": "#FFBC42",
@@ -15,27 +17,27 @@ const colorMap = {
 const Table = (props) => {
   return (
     <>
-        <div className='table-container'>
-          {data.elements.map((element) => (
-            <div
-              className='element'
-              key={element.name}
-              style={{
-                gridColumn: element.xpos,
-                gridRow: element.ypos,
-                borderColor: colorMap[element.category],
-                backgroundColor: colorMap[element.category],
-              }}
-              onClick={() => props.onSelectElement(element)}
-            >
-              <strong>{element.symbol}</strong>
-              <small className='number'>{element.number}</small>
-              <small className='name'>{element.name}</small>
-            </div>
-          ))}
-        </div>
+      <div className='table-container'>
+        {data.elements.map((element, index) => (
+          <div
+            className='element'
+            key={element.name}
+            style={{
+              gridColumn: element.xpos,
+              gridRow: element.ypos,
+              borderColor: colorMap[element.category],
+              backgroundColor: colorMap[element.category],
+            }}
+            onClick={() => props.onSelectElement(element)}
+          >
+            <strong>{element.symbol}</strong>
+            <small className='number'>{element.number}</small>
+            <small className='name'>{element.name}</small>
+          </div>
+        ))}
+      </div>
     </>
-    
+
   )
 }
 

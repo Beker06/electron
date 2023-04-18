@@ -83,6 +83,7 @@ const Signup = () => {
                     <div className="input-container">
                       <label htmlFor="email">Correo Electronico</label>
                       <input
+
                         id="email"
                         className="form-input"
                         type="email"
@@ -95,7 +96,6 @@ const Signup = () => {
                         id="password"
                         className="form-input"
                         type="password"
-                        autoComplete="on"
                         onChange={(e) => setPassword(e.target.value)}
                       />
                     </div>

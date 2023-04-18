@@ -12,67 +12,77 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.app{
+
+.app {
   height: 100vh;
   background-color: #ededed;
+  padding-top: 76px;
 }
 
-.main-container{
+.main-container {
   display: flex;
   flex-direction: row;
   width: 100%;
   min-height: 100vh;
 }
-.main-dark{
+
+.main-dark {
   background-color: #223;
   color: #ededed;
 
 }
-.main-light{
+
+.main-light {
   background-color: #fff;
 
 }
-.main-table-container{
+
+.main-table-container {
   display: flex;
   align-items: center;
   width: 100%;
   position: relative;
 }
-.main-col{
+
+.main-col {
   display: flex;
-  flex-direction:column ;
+  flex-direction: column;
   width: 80%;
 }
-.main-col h1{
+
+.main-col h1 {
   text-align: center;
 }
 
-.pointer{
+.pointer {
   cursor: pointer;
 }
 
-.container-inputs{
+.container-inputs {
   margin-top: 8px;
 }
-.input-container{
+
+.input-container {
   display: flex;
   flex-direction: column;
 }
-.input-container label{
+
+.input-container label {
   display: block;
   font-weight: 700;
-  font-size: 14px;  
+  font-size: 14px;
   line-height: 20px;
   margin-bottom: 4px;
   margin-top: 24px;
 }
-.textfield-outline{
+
+.textfield-outline {
   margin-top: 8px;
   margin-bottom: 8px;
   border-radius: 8px;
   height: 32px;
   width: 256px;
-  text-indent:8px;
+  text-indent: 8px;
   box-sizing: border-box;
   border: 1px;
   border-color: currentColor;
@@ -80,15 +90,17 @@ code {
   outline-offset: 0px;
   outline-color: #e11d48;
 }
-.form-input{
+
+.form-input {
   padding: 4px;
-  text-indent:8px;
+  text-indent: 8px;
   border: 1px solid #cbd5e1;
   border-radius: 2px;
   width: 100%;
   height: 26px;
 }
-.btn{
+
+.btn {
   padding: 8px;
   border: 1px solid #000;
   border-radius: 6px;

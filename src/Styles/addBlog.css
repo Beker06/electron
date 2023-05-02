@@ -1,0 +1,74 @@
+.addblog-main{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+}
+.form-card-container-addblog{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+.form-card-addblog{
+    background-color: white;
+    width: 70%;
+    margin:5% auto auto auto;
+    border-radius: 5px;
+    padding-top: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.container-login-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+.container-login-buttons div{
+    margin-right: 4px;
+}
+.container-login-buttons div a {
+    font-size: 14px;
+    text-decoration: underline;
+    color: #000;
+}
+.container-login-buttons div a:hover{
+    text-decoration: none;
+}
+.container-login-buttons button{
+    background-color: #000000;
+    color: #ffffff;
+}
+.container-login-buttons button:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+.container-register-buttons{
+    padding-top: 20px;
+    margin-top: 24px;
+    border-top:1px solid #e2e8f0 ;
+}
+.container-register-buttons div{
+    font-size: 16px;
+}
+.container-register-buttons div a{
+    color: #000;
+    text-decoration: underline;
+}
+.container-register-buttons div a:hover{
+    text-decoration: none;
+}
+.form-textarea{
+    padding: 8px 4px 8px 4px;
+    text-indent: 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 2px;
+    width: 100%;
+    height: 260px;
+    font-family: sans-serif;
+    resize: none;
+}

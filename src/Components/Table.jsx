@@ -4,14 +4,15 @@ import AOS from 'aos'
 import "aos/dist/aos.css"
 
 const colorMap = {
-  "noble gas": "#FFBC42",
-  "alkaline earth metal": "#EC674E",
-  "diatomic nonmetal": "#D81159",
-  "alkali metal": "#8F2D56",
-  "transition metal": "#58586B",
-  "post-transition metal": "#218380",
-  lanthanide: "#4AABAF",
-  metalloid: "#73D2DE"
+  "Gas noble": "#FFBC42",
+  "Metal alcalinotérreo": "#EC674E",
+  "No metal diatómico": "#D81159",
+  "Metal alcalino": "#8F2D56",
+  "Metal de transición": "#58586B",
+  "Metal post-transición": "#218380",
+  "Lantánidos": "#4AABAF",
+  "Metaloide": "#73D2DE",
+  "No metal poliatómico": "#414db5",
 };
 
 const Table = (props) => {

@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: column;
     width: 20%;
-    height: 100vh;
+    max-height: 900px;
     color: #000;
     padding-left: 10px;
     padding-right: 10px;
-    
+    overflow-y: auto;
 }
 .sidebar-container.light{
     background-color: #fff;
@@ -44,4 +44,27 @@
 .sb-image img{
     display: flex;
     width: 80%;;
+}
+.info-container{
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #cbd5e1;
+    padding-top: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 10px;
+}
+.info-line{
+    color: #000;
+    margin-top: 12px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 18px;
+}
+.info-line label:nth-child(1){
+    font-weight: 700;
+    letter-spacing: 0.25px;
+}
+.info-line label:nth-child(2){
+    font-weight: 400;
 }

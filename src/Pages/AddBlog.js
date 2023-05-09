@@ -1,31 +1,91 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../Components/Layout";
-import { Link, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { UserAuth } from "../context/AuthContext";
-import { child, get, ref } from "firebase/database";
-import {
-  auth,
-  browserSessionPersistence,
-  database,
-  setPersistence,
-  signInWithEmailAndPassword,
-} from "../Firebase/config";
-import { AutenticarUsuario } from "../Redux/actions/authActions";
-import "../Styles/addBlog.css"
+import { useSelector } from "react-redux";
+import {  ref, set } from "firebase/database";
+import { database, storage } from "../Firebase/config";
+import "../Styles/addBlog.css";
+import { v4 } from "uuid";
+import dayjs from "dayjs";
+import "dayjs/locale/es";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { uploadBytes, ref as refStore, getDownloadURL } from "firebase/storage";
 
 const AddBlog = () => {
-  const navigate = useNavigate();
-  const disptach = useDispatch();
-  const { setDbuser } = UserAuth();
-  const [user, setUser] = useState(null);
+  const dbuser = useSelector((state) => state.usuario.user);
+  const [imgCodified, setImgCodified] = useState(null);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const dbRef = ref(database);
+  const [coverPicture, setCoverPicure] = useState(null);
 
-  const signIn = (e) => {
+  dayjs.locale("es");
 
+  const subirBlog = async (e) => {
+    e.preventDefault();
+    if (!title || !content) return toast.warn("Debe llenar todos los campos", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      progress: undefined,
+  });;
+    const idBlog = v4();
+    const coverPictureUrl = await uploadFile(coverPicture);
+    try {
+      set(ref(database, `preblogs/blog-${idBlog}`), {
+        id: "blog-" + idBlog,
+        titulo: title,
+        contenido: content,
+        autor: dbuser.username,
+        fecha: dayjs().format("DD-MMM-YYYY"),
+        coverPicture: coverPictureUrl,
+      });
+      toast.success("El articulo será revisado antes de publicarse", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        progress: undefined,
+      });
+      setTitle("")
+      setContent("")
+      setCoverPicure(null)
+    } catch (error) {
+      alert(error);
+      console.log(error);
+    }
   };
+
+  const handlePreview = async (e) => {
+    await setCoverPicure(e.target.files[0]);
+  };
+
+  const createPreview = async (file) => {
+    const reader = new FileReader();
+    const blob = new Blob([file]);
+    await reader.readAsDataURL(blob);
+    reader.onload = () => {
+      const imgUrl = reader.result;
+      setImgCodified(imgUrl);
+    };
+  };
+
+  const handleContentChange = (e) => {
+    setContent(e.target.value);
+  };
+
+  async function uploadFile(file) {
+    const storageRef = refStore(storage, `Portadas/${v4()}`);
+    await uploadBytes(storageRef, file);
+    const urlCover = await getDownloadURL(storageRef);
+    return urlCover;
+  }
+
+  useEffect(() => {
+    createPreview(coverPicture);
+  }, [coverPicture]);
 
   return (
     <>
@@ -42,6 +102,7 @@ const AddBlog = () => {
                       id="title"
                       className="form-input"
                       type="text"
+                      value={title}
                       onChange={(e) => setTitle(e.target.value)}
                     />
                   </div>
@@ -51,14 +112,33 @@ const AddBlog = () => {
                       id="content"
                       className="form-textarea"
                       type="text"
-                      onChange={(e) => setContent(e.target.value)}
+                      value={content}
+                      onChange={handleContentChange}
                     />
                   </div>
+                  <div className="input-image-container">
+                    <input
+                      accept="image/png,image/jpeg,image/jpg"
+                      type="file"
+                      name="coverPicture"
+                      id="coverPicture"
+                      alt="si"
+                      onChange={handlePreview}
+                    />
+                  </div>
+                  {coverPicture ? (
+                    <div 
+                      className="image-preview"
+                      style={{
+                        backgroundImage: "url(" + imgCodified + ")",
+                      }}
+                    ></div>
+                  ) : null}
                 </div>
                 <div className="container-login-buttons">
                   <button
-                    className="btn pointer bg-black text-[#AEE200] hover:bg-[#AEE200] hover:text-black ml-3"
-                    onClick={signIn}
+                    className="btn pointer"
+                    onClick={subirBlog}
                   >
                     Subir blog
                   </button>

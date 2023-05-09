@@ -1,0 +1,40 @@
+.document-container{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+    margin: 24px auto 0px auto;
+    border-radius: 0.5rem;
+    padding: 32px 48px 32px 48px;
+}
+.document-container.light{
+    background-color: #ffffff;
+}
+.document-container.dark{
+    background-color: #242526;
+}
+.title-container{
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 24px;
+}
+.document-info{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    font-size: 18px;
+}
+.document-autor{
+    font-weight: 700;
+    font-size: 18px;
+}
+.document-autor span{
+    font-weight: 400;
+}
+.document-contenido{
+    margin-top: 14px;
+    font-size: 18px;
+    white-space: pre-wrap;
+}

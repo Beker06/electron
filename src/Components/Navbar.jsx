@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Luna from '../Assets/Img/moon.png';
 import Sol from '../Assets/Img/sun.png';
 import { UseThemeContext } from '../context/themeContext'
@@ -10,13 +10,12 @@ import AOS from 'aos'
 import "aos/dist/aos.css"
 import "../Styles/botonMenu.css"
 
-
-
 const Navbar = ({ dbuser, autenticacion }) => {
   const dispatch = useDispatch()
   const navigate = useNavigate();
+  const location = useLocation();
+  const { pathname } = location;
   const [navActive, setNavActive] = useState(false);
-
 
   const signOut = () => {
     auth.signOut();
@@ -39,12 +38,11 @@ const Navbar = ({ dbuser, autenticacion }) => {
       <header>
         <nav id="navbar" className={`${isDarkMode ? "dark" : "light"}`}>
           <div onClick={() => navigate("/")} className='pointer'><h1 >electron</h1></div>
-          <div className='navLinksContainer'>
-            <button className='navButton' onClick={() => navigate("/")}>
+          <div className={`navLinksContainer ${isDarkMode ? "dark" : "light"}`}>
+            <button className={`navButton ${isDarkMode ? "dark" : ""} ${!pathname.includes("/blogs") ? "navSelected" : ""}`} onClick={() => navigate("/")}>
               Tabla
             </button>
-
-            <button className="navButton" onClick={() => navigate("/blogs")}>
+            <button className={`navButton ${isDarkMode ? "dark" : ""} ${pathname.includes("/blogs") ? "navSelected" : ""}`} onClick={() => navigate("/blogs")}>
               Blog
             </button>
             <div className='theme-container' onClick={toggleDarkMode}>
@@ -52,16 +50,16 @@ const Navbar = ({ dbuser, autenticacion }) => {
             </div>
             <div className='bars-container'>
               <div className='container-menu-button' onClick={() => setNavActive(!navActive)}>
-                <button className={`${navActive ? "menu-button" : "menu-static"}`}>
+                <button className={`${navActive ? "menu-button" : "menu-static"} `}>
                   {autenticacion ? (
                     <>
-                      <label>{dbuser.username}</label>
+                      <label className={`${isDarkMode ? "dark" : ""}`}>{dbuser.username}</label>
                     </>
                   ) : (
                     <>
-                      <div></div>
-                      <div></div>
-                      <div></div>
+                      <div className={`${isDarkMode ? "dark" : "light"}`}></div>
+                      <div className={`${isDarkMode ? "dark" : "light"}`}></div>
+                      <div className={`${isDarkMode ? "dark" : "light"}`}></div>
                     </>
                   )}
 
@@ -80,9 +78,9 @@ const Navbar = ({ dbuser, autenticacion }) => {
                               >
                                 Crear blog{" "}
                               </button>
-                              {dbuser.isAdmin ? (
+                              {dbuser.isAdmin ? ( 
                                 <button
-                                  onClick={() => navigate("/addBlog")}
+                                  onClick={() => navigate("/dashboard/blogs")}
                                 >
                                   Tablero{" "}
                                 </button>

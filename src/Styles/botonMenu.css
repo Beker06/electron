@@ -31,20 +31,30 @@
 }
 
 .menu-static>div {
-    background-color: #000;
     height: 2px;
     width: 100%;
     border-radius: 5px;
     transition: all .3s;
 }
+.menu-static>div.dark {
+    background-color: #fff;
+}
+.menu-static>div.light {
+    background-color: #000;
+}
 
 .menu-button>div {
-    background-color: #000;
     height: 2px;
     width: 100%;
     border-radius: 5px;
     transition: all .3s;
     transform-origin: left;
+}
+.menu-button>div.dark {
+    background-color: #fff;
+}
+.menu-button>div.light {
+    background-color: #000;
 }
 
 .container-menu {

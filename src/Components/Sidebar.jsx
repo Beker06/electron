@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { UseThemeContext } from '../context/themeContext'
+import '../Styles/sidebar.css'
 
 const Sidebar = (props) => {
   const { isDarkMode } = UseThemeContext()

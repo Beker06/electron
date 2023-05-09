@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom'
 import "../Styles/login.css"
 import Layout from '../Components/Layout'
 import Space from '../Assets/Img/Space.jpg'
-import reactIcon from "../Assets/Img/reactIcon.png"
 import {
     auth,
     database,
@@ -92,7 +91,7 @@ const Login = () => {
                                             </Link>
                                         </div>
                                         <button
-                                            className="btn pointer bg-black text-[#AEE200] hover:bg-[#AEE200] hover:text-black ml-3"
+                                            className="btn pointer"
                                             onClick={signIn}
                                         >
                                             Inicia sesion
@@ -103,7 +102,7 @@ const Login = () => {
                                     <div className="text-sm">
                                         ¿No tienes una cuenta?{" "}
                                         <Link
-                                            className="font-medium text-black underline hover:text-[#AEE200] hover:no-underline"
+                                            className=""
                                             to="/signup"
                                         >
                                             Registrate

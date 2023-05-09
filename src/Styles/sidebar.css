@@ -11,10 +11,14 @@
 .sidebar-container.light{
     background-color: #fff;
     box-shadow: inset 2px 2px 4px 0 rgba(0,0,0,0.2);
+    color: #000;
 }
 .sidebar-container.dark{
-    border-left: 1px solid #fff;
+    background-color: #242526;
+    box-shadow: inset 2px 2px 4px 0 rgba(0,0,0,0.2);
     color: #fff;
+    border-left: 1px inset rgba(255,255,255,0.2);
+    
 }
 .element-title{
     display: flex;
@@ -53,9 +57,9 @@
     padding-left: 6px;
     padding-right: 6px;
     padding-bottom: 10px;
+    margin-top: 8px;
 }
 .info-line{
-    color: #000;
     margin-top: 12px;
     width: 100%;
     font-size: 16px;

@@ -1,0 +1,110 @@
+.dashboard-main-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 90vh;
+}
+.admin-sidebar-container{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    max-height: 900px;
+    color: #000;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow-y: auto;
+}
+.admin-sidebar-container.light{
+    background-color: #fff;
+    box-shadow: inset 0px 0px 2px 2px rgba(0,0,0,0.2);
+    color: #000;
+}
+.admin-sidebar-container.dark{
+    background-color: #242526;
+    box-shadow: inset 0px 0px 2px 2px rgba(0,0,0,0.2);
+    color: #fff;
+    border-right: 1px inset rgba(255,255,255,0.2);
+    
+}
+.element-title{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #cbd5e1;
+    margin-bottom: 10px;
+}
+.element-title.dark{
+    border-bottom: 1px solid #e2e8f0;
+}
+.element-title h1{
+    margin-right: 5px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 20px;
+}
+.element-title h1:nth-child(1){
+    margin-right: 20px;
+    margin-left: 5px;
+}
+.sb-admin-image{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+}
+.sb-admin-image img{
+    display: flex;
+    width: 80%;;
+}
+.admin-sidebar-container ul{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    border-top: 1px solid #cbd5e1;
+    padding-top: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 10px;
+    margin-top: 8px;
+}
+.admin-sidebar-container ul li{
+    margin-right: 0;
+    margin-bottom: 2px;
+    list-style: none;
+}
+.admin-sidebar-container ul li a{
+    display: flex;
+    align-items: center;
+    padding: 8px 16px 8px 0px;
+    border-radius: 4px;
+    white-space: nowrap;
+    fill: currentColor;
+    text-decoration: none;
+}
+.admin-sidebar-container ul li a.light{
+    color: #000000;
+}
+.admin-sidebar-container ul li a.dark{
+    color: #ffffff;
+}
+.admin-sidebar-container ul li a.light:hover{
+    background-color:#e5e7eb;
+}
+.admin-sidebar-container ul li a.dark:hover{
+    background-color: #3f3f46;
+}
+.linkSelected.light{
+    background-color: #eef2ff;
+}
+.linkSelected.dark{
+    background-color: #18181b;
+}
+.admin-sidebar-container ul li a img{
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+.admin-sidebar-container ul li a span{
+    font-size: 20px;
+    line-height: 1.5rem; 
+}

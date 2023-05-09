@@ -72,3 +72,24 @@
     font-family: sans-serif;
     resize: none;
 }
+.input-image-container{
+    display: flex;
+    margin-top: 32px;
+    margin-bottom: 25px;
+    width: 100%;
+    height: auto;
+
+}
+.input-image-container input{
+    width: 80%;
+    height: 30px;
+    font-size: 18px;
+}
+.image-preview{
+    display: flex;
+    max-width: 200px;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+    object-fit: contain;
+}

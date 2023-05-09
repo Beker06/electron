@@ -6,6 +6,8 @@ import Blogs from './Pages/Blogs'
 import Login from './Pages/Login'
 import PeriodicTable from './Pages/PeriodicTable'
 import Signup from './Pages/Signup'
+import Dashboard from './Pages/Dashboard/Dashboard'
+import Usuarios from './Pages/Dashboard/Usuarios'
 
 const Router = () => {
     return (
@@ -16,6 +18,8 @@ const Router = () => {
             <Route element={<Blogs />} path="/blogs" />
             <Route element={<BlogDocument />} path="/blogs/:id" />
             <Route element={<AddBlog />} path="/addBlog" />
+            <Route element={<Dashboard />} path="/dashboard/blogs" />
+            <Route element={<Usuarios />} path="/dashboard/users" />
         </Routes>
     )
 }

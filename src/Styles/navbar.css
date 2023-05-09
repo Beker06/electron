@@ -20,9 +20,9 @@ header {
 }
 
 #navbar.dark {
-    background-color: #223;
-    color: #fff;
-    border-bottom: 1px solid #fff;
+    background-color: #242526;
+    color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.2);
 }
 
 #navbar h1 {
@@ -70,12 +70,10 @@ header {
     margin-right: 220px;
     align-items: center;
     justify-content: center;
-
 }
 
 .navLinksContainer .navButton {
     display: flex;
-    color: #000;
     font-size: 17px;
     font-weight: 600;
     background-color: transparent;
@@ -86,6 +84,10 @@ header {
     padding-left: 20px;
     cursor: pointer;
     border: none;
+    color: #000;
+}
+.navLinksContainer .navButton.dark {
+    color: #ffffff;
 }
 
 .navLinksContainer button:hover {
@@ -125,7 +127,6 @@ header {
 
 #menu .container-menu button {
     background-color: #fff;
-    color: #000;
     width: 100%;
     text-align: left;
     padding-left: 5px;
@@ -139,5 +140,13 @@ header {
 
 #menu .container-menu button:hover {
     background-color: #000;
+    color: #fff;
+}
+
+.navSelected{
+    text-decoration: underline !important;
+}
+
+.dark{
     color: #fff;
 }

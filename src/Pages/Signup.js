@@ -35,7 +35,7 @@ const Signup = () => {
           id: authUser.user.uid,
           username: username,
           email: email,
-          isAdmin: true,
+          isAdmin: false,
         }).then(() =>
           setPersistence(auth, browserSessionPersistence).then(() => {
             return signInWithEmailAndPassword(auth, email, password)

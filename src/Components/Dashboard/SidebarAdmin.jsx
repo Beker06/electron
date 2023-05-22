@@ -28,8 +28,8 @@ const SidebarAdmin = () => {
 
   return (
     <div className={`admin-sidebar-container light ${isDarkMode && "dark"}`}>
-        <div className={`element-title ${isDarkMode && "dark"}`}>
-            <h2>{dbuser.username}</h2>
+        <div className={`element-title justify-center ${isDarkMode && "dark"}`}>
+            <h2 className='text-[32px] font-bold'>{dbuser.username}</h2>
         </div>
         <div className='sb-admin-image'>
             <img src={reactIcon} alt="react" />

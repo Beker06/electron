@@ -8,7 +8,7 @@ const GetBlogData = () => {
     const [blogData, setBlogData] = useState([])
 
     const fetchBlogData = (id) => {
-        get(child(dbRef, `preblogs/${id}`))
+        get(child(dbRef, `blogs/${id}`))
             .then((snapshot) => {
                 if(snapshot.exists()){
                     setBlogData(snapshot.val());

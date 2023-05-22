@@ -68,7 +68,7 @@ const Signup = () => {
           <div className="login-main">
             <div className="form-card-container">
               <div className="form-card">
-                <h1 className="">Crea tu cuenta</h1>
+                <h1 className="text-[28px] font-bold">Crea tu cuenta</h1>
                 <form>
                   <div className="container-inputs">
                     <div className="input-container">

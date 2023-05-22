@@ -8,7 +8,7 @@ const Sidebar = (props) => {
   return (
     <>
       <div className={`sidebar-container light ${isDarkMode && "dark"}`}>
-        <div className={`element-title ${isDarkMode && "dark"}`}>
+        <div className={`element-title py-3 ${isDarkMode && "dark"}`}>
           <h1>{props.number}</h1>
           <h1>{props.name}</h1>
           <h5>{`(${props.symbol})`}</h5>

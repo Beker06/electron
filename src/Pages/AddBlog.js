@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../Components/Layout";
 import { useSelector } from "react-redux";
-import {  ref, set } from "firebase/database";
+import { ref, set } from "firebase/database";
 import { database, storage } from "../Firebase/config";
 import "../Styles/addBlog.css";
 import { v4 } from "uuid";
@@ -22,26 +22,8 @@ const AddBlog = () => {
 
   const subirBlog = async (e) => {
     e.preventDefault();
-    if (!title || !content) return toast.warn("Debe llenar todos los campos", {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      progress: undefined,
-  });;
-    const idBlog = v4();
-    const coverPictureUrl = await uploadFile(coverPicture);
-    try {
-      set(ref(database, `preblogs/blog-${idBlog}`), {
-        id: "blog-" + idBlog,
-        titulo: title,
-        contenido: content,
-        autor: dbuser.username,
-        fecha: dayjs().format("DD-MMM-YYYY"),
-        coverPicture: coverPictureUrl,
-      });
-      toast.success("El articulo será revisado antes de publicarse", {
+    if (!title || !content)
+      return toast.warn("Debe llenar todos los campos", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -49,12 +31,59 @@ const AddBlog = () => {
         pauseOnHover: true,
         progress: undefined,
       });
-      setTitle("")
-      setContent("")
-      setCoverPicure(null)
-    } catch (error) {
-      alert(error);
-      console.log(error);
+    const idBlog = v4();
+    const coverPictureUrl = await uploadFile(coverPicture);
+
+    if (dbuser.isAdmin === true) {
+      try {
+        set(ref(database, `blogs/blog-${idBlog}`), {
+          id: "blog-" + idBlog,
+          titulo: title,
+          contenido: content,
+          autor: dbuser.username,
+          fecha: dayjs().format("DD-MMM-YYYY"),
+          coverPicture: coverPictureUrl,
+        });
+        toast.success("El articulo ha sido subido correctamente", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          progress: undefined,
+        });
+        setTitle("");
+        setContent("");
+        setCoverPicure(null);
+      } catch (error) {
+        alert(error);
+        console.log(error);
+      }
+    } else {
+      try {
+        set(ref(database, `preblogs/blog-${idBlog}`), {
+          id: "blog-" + idBlog,
+          titulo: title,
+          contenido: content,
+          autor: dbuser.username,
+          fecha: dayjs().format("DD-MMM-YYYY"),
+          coverPicture: coverPictureUrl,
+        });
+        toast.success("El articulo será revisado antes de publicarse", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          progress: undefined,
+        });
+        setTitle("");
+        setContent("");
+        setCoverPicure(null);
+      } catch (error) {
+        alert(error);
+        console.log(error);
+      }
     }
   };
 
@@ -127,7 +156,7 @@ const AddBlog = () => {
                     />
                   </div>
                   {coverPicture ? (
-                    <div 
+                    <div
                       className="image-preview"
                       style={{
                         backgroundImage: "url(" + imgCodified + ")",
@@ -136,10 +165,7 @@ const AddBlog = () => {
                   ) : null}
                 </div>
                 <div className="container-login-buttons">
-                  <button
-                    className="btn pointer"
-                    onClick={subirBlog}
-                  >
+                  <button className="btn pointer" onClick={subirBlog}>
                     Subir blog
                   </button>
                 </div>

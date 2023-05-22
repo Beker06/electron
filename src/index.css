@@ -1,3 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Proxima Nova;
+  src: url(./Assets/Fonts/Proxima-Nova-Rg-Regular.otf);
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Proxima Nova;
+  src: url(./Assets/Fonts/Proxima-Nova-Rg-Regular.otf);
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: Proxima Nova;
+  src: url(./Assets/Fonts/Proxima-Nova-Rg-Regular.otf);
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Proxima Nova;
+  src: url(./Assets/Fonts/Proxima-Nova-Semibold.otf);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Proxima Nova;
+  src: url(./Assets/Fonts/Proxima-Nova-Semibold.otf);
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Proxima Nova;
+  src: url(./Assets/Fonts/Proxima-Nova-Semibold.otf);
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Proxima Nova;
+  src: url(./Assets/Fonts/Proxima-Nova-Bold.otf);
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Proxima Nova;
+  src: url(./Assets/Fonts/Proxima-Nova-Bold.otf);
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: Proxima Nova;
+  src: url(./Assets/Fonts/Proxima-Nova-Bold.otf);
+  font-style: normal;
+  font-weight: 900;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -15,9 +82,9 @@ code {
 
 .app {
   height: auto;
-  min-height: 92.3vh;
+  min-height: 100vh;
   background-color: #ededed;
-  padding-top: 76px;
+  padding-top: 65px;
 }
 
 .main-container {
@@ -50,10 +117,13 @@ code {
   flex-direction: column;
   width: 80%;
   max-height: 90vh;
+  margin-top: 4%;
 }
 
 .main-col h1 {
   text-align: center;
+  font-size: 34px;
+  font-weight: 700;
 }
 
 .pointer {
@@ -72,7 +142,7 @@ code {
 .input-container label {
   display: block;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   margin-bottom: 4px;
   margin-top: 24px;
@@ -99,7 +169,7 @@ code {
   border: 1px solid #cbd5e1;
   border-radius: 2px;
   width: 100%;
-  height: 26px;
+  height: 32px;
 }
 
 .btn {

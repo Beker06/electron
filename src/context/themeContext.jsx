@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect, useContext } from "react";
+import { createContext, useState, useContext } from "react";
 
 
 const ThemeContext = createContext({});
@@ -10,7 +10,7 @@ const ThemeContextProvider = ({ children }) => {
     <ThemeContext.Provider
       value={{
         isDarkMode,
-        setIsDarkMode
+        setIsDarkMode,
       }}
     >
       {children}

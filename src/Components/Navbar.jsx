@@ -36,8 +36,8 @@ const Navbar = ({ dbuser, autenticacion }) => {
   return (
     <>
       <header>
-        <nav id="navbar" className={`${isDarkMode ? "dark" : "light"}`}>
-          <div onClick={() => navigate("/")} className='pointer'><h1 >electron</h1></div>
+        <nav id="navbar" className={`py-2 ${isDarkMode ? "dark" : "light"}`}>
+          <div onClick={() => navigate("/")} className='pointer'><h1>electron</h1></div>
           <div className={`navLinksContainer ${isDarkMode ? "dark" : "light"}`}>
             <button className={`navButton ${isDarkMode ? "dark" : ""} ${!pathname.includes("/blogs") ? "navSelected" : ""}`} onClick={() => navigate("/")}>
               Tabla

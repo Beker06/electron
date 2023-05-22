@@ -13,6 +13,7 @@
 }
 .blog-button-container .add-blog-button{
     display: flex;
+    min-width: 150px;
     background-color: #000000;
     color: #ffffff;
     padding: 0px 8px;

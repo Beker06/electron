@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/my-app/static/css/main.04ac8216.css",
-    "main.js": "/my-app/static/js/main.3cd89489.js",
-    "static/media/Space.jpg": "/my-app/static/media/Space.a400e92f856ac30d5f48.jpg",
-    "static/media/reactIcon.png": "/my-app/static/media/reactIcon.81ed438b18e24116794d.png",
-    "static/media/Proxima-Nova-Rg-Regular.otf": "/my-app/static/media/Proxima-Nova-Rg-Regular.0c7fb282ec7e8dacecf0.otf",
-    "static/media/Proxima-Nova-Bold.otf": "/my-app/static/media/Proxima-Nova-Bold.053fb12e2f0f2413b21f.otf",
-    "static/media/Proxima-Nova-Semibold.otf": "/my-app/static/media/Proxima-Nova-Semibold.47783ebc825aa47e0022.otf",
-    "static/media/blogDefault.png": "/my-app/static/media/blogDefault.f487abe90d6a3360bec8.png",
-    "static/media/moon.png": "/my-app/static/media/moon.db1e644497f5b862dd5b.png",
-    "static/media/sun.png": "/my-app/static/media/sun.f3dd15f388ca6b743db5.png",
-    "index.html": "/my-app/index.html",
-    "main.04ac8216.css.map": "/my-app/static/css/main.04ac8216.css.map",
-    "main.3cd89489.js.map": "/my-app/static/js/main.3cd89489.js.map"
+    "main.css": "/electron/static/css/main.1182e71e.css",
+    "main.js": "/electron/static/js/main.75bf36ec.js",
+    "static/media/Space.jpg": "/electron/static/media/Space.a400e92f856ac30d5f48.jpg",
+    "static/media/reactIcon.png": "/electron/static/media/reactIcon.81ed438b18e24116794d.png",
+    "static/media/Proxima-Nova-Rg-Regular.otf": "/electron/static/media/Proxima-Nova-Rg-Regular.0c7fb282ec7e8dacecf0.otf",
+    "static/media/Proxima-Nova-Bold.otf": "/electron/static/media/Proxima-Nova-Bold.053fb12e2f0f2413b21f.otf",
+    "static/media/Proxima-Nova-Semibold.otf": "/electron/static/media/Proxima-Nova-Semibold.47783ebc825aa47e0022.otf",
+    "static/media/blogDefault.png": "/electron/static/media/blogDefault.f487abe90d6a3360bec8.png",
+    "static/media/moon.png": "/electron/static/media/moon.db1e644497f5b862dd5b.png",
+    "static/media/sun.png": "/electron/static/media/sun.f3dd15f388ca6b743db5.png",
+    "index.html": "/electron/index.html",
+    "main.1182e71e.css.map": "/electron/static/css/main.1182e71e.css.map",
+    "main.75bf36ec.js.map": "/electron/static/js/main.75bf36ec.js.map"
   },
   "entrypoints": [
-    "static/css/main.04ac8216.css",
-    "static/js/main.3cd89489.js"
+    "static/css/main.1182e71e.css",
+    "static/js/main.75bf36ec.js"
   ]
 }

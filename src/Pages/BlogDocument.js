@@ -11,7 +11,7 @@ const BlogDocument = () => {
   const { blogData, fetchBlogData } = GetBlogData();
   const { isDarkMode } = UseThemeContext();
   const navigate = useNavigate()
-
+ 
   useEffect(() => {
     fetchBlogData(id);
   });

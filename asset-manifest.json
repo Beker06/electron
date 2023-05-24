@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/electron/static/css/main.1182e71e.css",
-    "main.js": "/electron/static/js/main.75bf36ec.js",
+    "main.js": "/electron/static/js/main.5579529d.js",
     "static/media/Space.jpg": "/electron/static/media/Space.a400e92f856ac30d5f48.jpg",
     "static/media/reactIcon.png": "/electron/static/media/reactIcon.81ed438b18e24116794d.png",
     "static/media/Proxima-Nova-Rg-Regular.otf": "/electron/static/media/Proxima-Nova-Rg-Regular.0c7fb282ec7e8dacecf0.otf",
@@ -12,10 +12,10 @@
     "static/media/sun.png": "/electron/static/media/sun.f3dd15f388ca6b743db5.png",
     "index.html": "/electron/index.html",
     "main.1182e71e.css.map": "/electron/static/css/main.1182e71e.css.map",
-    "main.75bf36ec.js.map": "/electron/static/js/main.75bf36ec.js.map"
+    "main.5579529d.js.map": "/electron/static/js/main.5579529d.js.map"
   },
   "entrypoints": [
     "static/css/main.1182e71e.css",
-    "static/js/main.75bf36ec.js"
+    "static/js/main.5579529d.js"
   ]
 }
